@@ -1,0 +1,1453 @@
+{
+	"info": {
+		"_postman_id": "7e4ca616-0334-4bea-8339-3ec72d317d87",
+		"name": "ECommerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25101763",
+		"_collection_link": "https://www.postman.com/martian-star-992501/workspace/phase-2-workspace/collection/25101763-7e4ca616-0334-4bea-8339-3ec72d317d87?action=share&source=collection_link&creator=25101763"
+	},
+	"item": [
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "add Category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "wello__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZWY3ZTE3NzkyNjMyYWFkZWQ5MDhhNCIsImlhdCI6MTY5MzQxNzAwNywiZXhwIjoxNjkzNDIwNjA3fQ.GxIhRKNqvg_QgNiNX558mZJtCRBmgP-Yi5dc9iOLAxA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Wello/Pictures/1426481.jpg"
+								},
+								{
+									"key": "name",
+									"value": "Electronics",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/category/add",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update Category",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/S:/Downloads/2560.jpeg"
+								},
+								{
+									"key": "name",
+									"value": "Electronics",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/category/update/64dde188d0a6338ab83a1318",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"update",
+								"64dde188d0a6338ab83a1318"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete Category",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "wello__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZWUyOTUzNzQ2YmQ2ODFlYWRjNzczMSIsImlhdCI6MTY5MzQwNjM3MiwiZXhwIjoxNjkzNDA5OTcyfQ.DC1oKOp7hi0-BQJ-l31CZFqVHFP_E8MbjCQLF62FKl4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "localhost:3000/category/delete/64e2170297aaa26ee21db0c7",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"delete",
+								"64e2170297aaa26ee21db0c7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get category id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "localhost:3000/category/getCategoryById/64e216d4921879cc0f4078f1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"getCategoryById",
+								"64e216d4921879cc0f4078f1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search Category",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/S:/Downloads/2560.jpeg"
+								},
+								{
+									"key": "name",
+									"value": "Electronics",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/category/search",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"search"
+							],
+							"query": [
+								{
+									"key": "searchKey",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all Categories",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/S:/Downloads/2560.jpeg"
+								},
+								{
+									"key": "name",
+									"value": "Electronics",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/category/allCategories",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"allCategories"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Subcategory",
+			"item": [
+				{
+					"name": "add subCategory",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "wello__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZWY3ZTE3NzkyNjMyYWFkZWQ5MDhhNCIsImlhdCI6MTY5MzQxNzAwNywiZXhwIjoxNjkzNDIwNjA3fQ.GxIhRKNqvg_QgNiNX558mZJtCRBmgP-Yi5dc9iOLAxA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Wello/Pictures/Screenshot (87).png"
+								},
+								{
+									"key": "name",
+									"value": "Sub Electronic",
+									"type": "text"
+								},
+								{
+									"key": "categoryId",
+									"value": "64eed83512e9ee6af7755c1b",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/subcategory/add",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"subcategory",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update subcategory",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/S:/Downloads/353671923_786237716293056_2655205705503813682_n.jpg"
+								},
+								{
+									"key": "name",
+									"value": "Electronics",
+									"type": "text"
+								},
+								{
+									"key": "categoryId",
+									"value": "64e216d4921879cc0f4078f1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/subcategory/update/64e2171b97aaa26ee21db0cb",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"subcategory",
+								"update",
+								"64e2171b97aaa26ee21db0cb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete subcategory",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "wello_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZWUyOTUzNzQ2YmQ2ODFlYWRjNzczMSIsImlhdCI6MTY5MzQwNTg0NiwiZXhwIjoxNjkzNDA5NDQ2fQ._g4GbZix450ke6Z4qo7LeCBXjqyzFg1FhCggEnCtl74",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/S:/Downloads/2560.jpeg"
+								},
+								{
+									"key": "name",
+									"value": "Electronics",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/subcategory/delete/64e2171b97aaa26ee21db0cb",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"subcategory",
+								"delete",
+								"64e2171b97aaa26ee21db0cb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search subcategory",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "s",
+									"value": "s",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/subcategory/search?searchKey=e",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"subcategory",
+								"search"
+							],
+							"query": [
+								{
+									"key": "searchKey",
+									"value": "e"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show all subCategory",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "s",
+									"value": "s",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/subcategory/showAll",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"subcategory",
+								"showAll"
+							],
+							"query": [
+								{
+									"key": "searchKey",
+									"value": "e",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show subcategory by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "localhost:3000/subcategory/getCategoryById/64e278bc5fdedcf0389b6bdc",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"subcategory",
+								"getCategoryById",
+								"64e278bc5fdedcf0389b6bdc"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Brand",
+			"item": [
+				{
+					"name": "add Brand",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "wello__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZWUyOTUzNzQ2YmQ2ODFlYWRjNzczMSIsImlhdCI6MTY5MzM3NjIyNSwiZXhwIjoxNjkzMzc5ODI1fQ.uPgcrWMpAuWpTdPAMLzLSanODMq8wMvnzQvWLFw7Lvg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Wello/Pictures/Screenshot (20)_LI.jpg"
+								},
+								{
+									"key": "name",
+									"value": "SekiMeki2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/brand/add",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"brand",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update Brand",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "name",
+									"value": "Electronics",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/brand/update/64e6494dd73988cc455d4331",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"brand",
+								"update",
+								"64e6494dd73988cc455d4331"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete Brand",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "localhost:3000/brand/delete/64e6494dd73988cc455d4331",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"brand",
+								"delete",
+								"64e6494dd73988cc455d4331"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all Brands",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/brand/getAll",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"brand",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Add Product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "wello__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZWUyOTUzNzQ2YmQ2ODFlYWRjNzczMSIsImlhdCI6MTY5Mzc0NDAxNywiZXhwIjoxNjkzNzQ3NjE3fQ.dogGwCIcSZmL3mPkMHhOSC7TBhLldR4yETh_4VOtxKA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Wello/Pictures/Screenshots/Screenshot (331).png"
+								},
+								{
+									"key": "coverImages",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "Honey Cake",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "when the sun see the light it's all done bro knows his shit good",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "152",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "75.2",
+									"type": "text"
+								},
+								{
+									"key": "discount",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "categoryId",
+									"value": "64e216d4921879cc0f4078f1",
+									"type": "text"
+								},
+								{
+									"key": "subcategoryId",
+									"value": "64e278bc5fdedcf0389b6bdc",
+									"type": "text"
+								},
+								{
+									"key": "brandId",
+									"value": "64e9e6f909002732f42ac1c9",
+									"type": "text"
+								},
+								{
+									"key": "sizes",
+									"value": "[\"2\",\"1\"]",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "colors",
+									"value": "[\"green\",\"lime\"]",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/product/add",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/product/?size=5&page=1&price[lte]=100&sort=stock,price&name=2&desc=sun&fields=name,stock,price,desc,paymentPrice",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								""
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "5"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "price[lte]",
+									"value": "100"
+								},
+								{
+									"key": "sort",
+									"value": "stock,price"
+								},
+								{
+									"key": "name",
+									"value": "2"
+								},
+								{
+									"key": "desc",
+									"value": "sun"
+								},
+								{
+									"key": "fields",
+									"value": "name,stock,price,desc,paymentPrice"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Sign Up user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Wello/Pictures/ba0499a07718524dc7902193b334c4a82aba22bf1dd42c07d61944f5e43d1270.jpg"
+								},
+								{
+									"key": "name",
+									"value": "wello",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "broFro@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "17",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "MALE",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "01001945231",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/user/sign-up/user",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"sign-up",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign Up Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Wello/Pictures/AOT-5.mp4_snapshot_01.51_[2019.08.14_12.10.21].jpg"
+								},
+								{
+									"key": "name",
+									"value": "bro",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "21sad@poverts.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "17",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "MALE",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "01001945231",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/user/sign-up/admin",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"sign-up",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign in",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"brofro@gmail.com\",\r\n    \"password\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/user/signin",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update user",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "wello__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZWVkMjZkYmRiOWI2YzQ0ZTMzY2ZlYiIsImlhdCI6MTY5MzQwODUxNywiZXhwIjoxNjkzNDEyMTE3fQ.hxYJf-HnCsCgOWRnCFQY6lZDBnH4MUvYGXPBIdlfXTA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Wello/Pictures/1717708.jpg"
+								},
+								{
+									"key": "name",
+									"value": "wello",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "theassassin1022@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "age",
+									"value": "18",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "01001945231222",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/user/update",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgot password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"jicoga6092@poverts.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/user/forgotPassword",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"forgotPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Password",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"newPassword\":\"123\",\r\n    \"cPassword\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/resetPassword/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZWUyYWU0ZmFlMDVkZDU5ZDQwOWQyYiIsImlhdCI6MTY5MzM3MzcyNywiZXhwIjoxNjkzMzc0MDI3fQ.e-srQU9Th8enwwBd67hzKD-ixwXi9N_mckB-iwuIrVs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"resetPassword",
+								"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZWUyYWU0ZmFlMDVkZDU5ZDQwOWQyYiIsImlhdCI6MTY5MzM3MzcyNywiZXhwIjoxNjkzMzc0MDI3fQ.e-srQU9Th8enwwBd67hzKD-ixwXi9N_mckB-iwuIrVs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "wello__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZWY3ZjIzMzQzMjk0YzA1N2ZhMzBiZCIsImlhdCI6MTY5MzQxNzI1OSwiZXhwIjoxNjkzNDIwODU5fQ.UntEyaLqW_Y3s6maj4LbeoL5LAVsaPzfjBlWJ7xo9Bs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Password",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "token",
+								"value": "wello__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZWUyOTUzNzQ2YmQ2ODFlYWRjNzczMSIsImlhdCI6MTY5MzQ3MDc5MCwiZXhwIjoxNjkzNDc0MzkwfQ.XkW9Sj4M7BlL0kjlhpJgITCc0owZUOaUWntfttg3SDY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oldPassword\":\"213\",\r\n    \"newPassword\":\"123\",\r\n    \"cPassword\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/user/changePassword",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"changePassword"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "add to cart",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "wello__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZjBhMGExMDY5Y2MyNzc5OTk3Njg3MCIsImlhdCI6MTY5Mzc0Mjg0MSwiZXhwIjoxNjkzNzQ2NDQxfQ.O3p-rrvhLnRuVqogL8yqHXaYvsIpfItJZixgILKHASU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\":\"64eee819e1dabc9b2b01d184\",\r\n    \"quantity\":3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/cart/addToCart",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cart",
+								"addToCart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show Cart",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "wello__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZjBhMGExMDY5Y2MyNzc5OTk3Njg3MCIsImlhdCI6MTY5MzQ5Nzg5NiwiZXhwIjoxNjkzNTAxNDk2fQ.si-KXJ4HHznNewRqMWYuAMQIIPlYz3US2-THz4ciStA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/cart/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cart",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Coupon code",
+			"item": [
+				{
+					"name": "Add coupon",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "wello__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZWUyOTUzNzQ2YmQ2ODFlYWRjNzczMSIsImlhdCI6MTY5MzU3Nzk3NiwiZXhwIjoxNjkzNTgxNTc2fQ.0ZNZCfRSgQFjmk2A3Gy-9bGOSPzTiK0jbTJtNADUQ1s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\":\"cc3r322\",\r\n    \"discount\":32,\r\n    \"expireDate\":\"2023-9-4\",\r\n    \"noOfUses\":5\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/coupon/add",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"coupon",
+								"add"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "Create Order from cart",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "wello__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZjBhMGExMDY5Y2MyNzc5OTk3Njg3MCIsImlhdCI6MTY5Mzc3ODAwOCwiZXhwIjoxNjkzNzgxNjA4fQ.99Hj4avpJiSRR7zemUhmqYE5pSCJCTtKfafqr30yOUk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"couponCode\":\"CC3R3\",\r\n    \"address\":\"Giza,Egypt\",\r\n    \"note\":\"Please take care of the products.\",\r\n    \"paymentMethod\":\"cash\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/order/create-cart-order",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"order",
+								"create-cart-order"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reviews",
+			"item": [
+				{
+					"name": "add review",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "wello__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZjBhMGExMDY5Y2MyNzc5OTk3Njg3MCIsImlhdCI6MTY5Mzc4NDQ3NywiZXhwIjoxNjkzNzg4MDc3fQ.qU04sdkfTk6ziK-Qioy-0rcmLsdDhUzEfLfkIMHJFvA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"comment\":\"طرش\",\r\n    \"rating\":4,\r\n    \"productId\":\"64f47c10cc2e5cd3c27680a7\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/review/add",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"review",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show product reviews",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "wello__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZjBhMGExMDY5Y2MyNzc5OTk3Njg3MCIsImlhdCI6MTY5Mzc4NDQ3NywiZXhwIjoxNjkzNzg4MDc3fQ.qU04sdkfTk6ziK-Qioy-0rcmLsdDhUzEfLfkIMHJFvA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/review/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"review",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update review",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "token",
+								"value": "wello__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZjBhMGExMDY5Y2MyNzc5OTk3Njg3MCIsImlhdCI6MTY5Mzc4NDQ3NywiZXhwIjoxNjkzNzg4MDc3fQ.qU04sdkfTk6ziK-Qioy-0rcmLsdDhUzEfLfkIMHJFvA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"comment\":\"2طرش\",\r\n    \"rating\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/review/update/64f503b13720014c6d2dec88",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"review",
+								"update",
+								"64f503b13720014c6d2dec88"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete review",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "wello__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZjBhMGExMDY5Y2MyNzc5OTk3Njg3MCIsImlhdCI6MTY5MzgxMDc4OSwiZXhwIjoxNjkzODE0Mzg5fQ.SlxeQd_mSaMNYTJEl3anDaPXPX2PK7G4yaItsJSGDd8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"comment\":\"طرش\",\r\n    \"rating\":4,\r\n    \"productId\":\"64f47c10cc2e5cd3c27680a7\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/review/delete/64f5809ed103f3006261c0f5",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"review",
+								"delete",
+								"64f5809ed103f3006261c0f5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "add to favorites",
+			"item": [
+				{
+					"name": "add to favorites",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "wello__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZjBhMGExMDY5Y2MyNzc5OTk3Njg3MCIsImlhdCI6MTY5MzY1ODgyOSwiZXhwIjoxNjkzNjYyNDI5fQ.WzxFFhF5RQ9tOSrUJyCyLqJwc3jM2GKGIRTJkt85AOw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\":\"64eee819e1dabc9b2b01d184\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/user/add-to-favorites",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"add-to-favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get favorites",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "wello__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZjBhMGExMDY5Y2MyNzc5OTk3Njg3MCIsImlhdCI6MTY5MzY1ODgyOSwiZXhwIjoxNjkzNjYyNDI5fQ.WzxFFhF5RQ9tOSrUJyCyLqJwc3jM2GKGIRTJkt85AOw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/user/get-favorites",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"get-favorites"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
